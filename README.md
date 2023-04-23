@@ -18,11 +18,24 @@
 
 ```
 ## ****の部分はDynamoDBで作成した名前を選択する
+
 GET /****/items/{id} ##id単位で取得
 GET /****/items ##一括取得
 PUT /****/items ##idを指定してupdate
 DELETE /****/items/{id}
 ```
+
+## APIテスト curl
+
+```
+## アタッチされたルートに対して curl でメソッドを指定してアクセスする
+## example: PUT IDを指定して、12345の myitemという名前のデータを作成する
+curl -X "PUT" -H "Content-Type: application/json" -d "{\"id\": \"123\", \"price\": 12345, \"name\": \"myitem\"}" https://{取得したURL}/****/items
+
+## example: GETメソッドで IDを指定して、123のデータを取得する
+curl https://{取得したURL}/****/items/123
+```
+
 
 ## 構成
 

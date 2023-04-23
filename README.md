@@ -14,6 +14,15 @@
 
 - `http-crud-training-****` の ****をそれぞれ名称を決める。
 
+## API 一覧
+
+```
+## ****の部分はDynamoDBで作成した名前を選択する
+GET /****/items/{id} ##id単位で取得
+GET /****/items ##一括取得
+PUT /****/items ##idを指定してupdate
+DELETE /****/items/{id}
+```
 
 ## 構成
 

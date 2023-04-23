@@ -10,6 +10,11 @@
 - API Gatewayを開始、POSTMANなどでリクエストができること
 - Amplify studio から APIにリクエストをし結果を描画させることができること
 
+## DynamoDBは共通して利用するため下記をテーブル名とする
+
+- `http-crud-training-****` の ****をそれぞれ名称を決める。
+
+
 ## 構成
 
 ![AWS図表](./images/arch.png) 

@@ -11,7 +11,7 @@ const client = new DynamoDBClient({});
 
 const dynamo = DynamoDBDocumentClient.from(client);
 
-const tableName = "http-crud-training";
+const tableName = "http-crud-training-****";
 
 export const handler = async (event, context) => {
   let body;
@@ -22,7 +22,7 @@ export const handler = async (event, context) => {
 
   try {
     switch (event.routeKey) {
-      case "DELETE /saku/items/{id}":
+      case "DELETE /****/items/{id}":
         await dynamo.send(
           new DeleteCommand({
             TableName: tableName,
@@ -33,7 +33,7 @@ export const handler = async (event, context) => {
         );
         body = `Deleted item ${event.pathParameters.id}`;
         break;
-      case "GET /saku/items/{id}":
+      case "GET /****/items/{id}":
         body = await dynamo.send(
           new GetCommand({
             TableName: tableName,
@@ -44,13 +44,13 @@ export const handler = async (event, context) => {
         );
         body = body.Item;
         break;
-      case "GET /saku/items":
+      case "GET /sa****ku/items":
         body = await dynamo.send(
           new ScanCommand({ TableName: tableName })
         );
         body = body.Items;
         break;
-      case "PUT /saku/items":
+      case "PUT /****/items":
         let requestJSON = JSON.parse(event.body);
         await dynamo.send(
           new PutCommand({
